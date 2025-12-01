@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quora – A place to share knowledge</title>
+    <meta
+      name="description"
+      content="Quora replica login experience – share knowledge and better understand the world."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" type="image/svg+xml" href="images/quora-favicon.svg" />
+  </head>
+  <body class="bg-[#f1f2f2] text-[#2d2d2d] antialiased">
+    <div class="login-page min-h-screen relative overflow-hidden">
+      <div class="background-illustration" aria-hidden="true"></div>
+
+      <main
+        class="auth-wrapper min-h-screen flex flex-col items-center justify-center px-4 py-10"
+      >
+        <section class="auth-card w-full max-w-4xl rounded-3xl shadow-main bg-white">
+          <div class="auth-card__inner grid grid-cols-1 md:grid-cols-2">
+            <div class="auth-card__left px-10 py-10 md:py-14">
+              <div class="quora-wordmark text-center md:text-left">Quora</div>
+              <p class="tagline text-center md:text-left mt-4 text-lg md:text-xl">
+                A place to share knowledge and better understand the world
+              </p>
+
+              <p class="legal-copy text-sm mt-6 leading-relaxed text-center md:text-left">
+                By continuing you indicate that you agree to Quora’s
+                <a href="#" class="text-quora underline hover:text-quora-dark">Terms of Service</a>
+                and
+                <a href="#" class="text-quora underline hover:text-quora-dark">Privacy Policy</a>.
+              </p>
+
+              <div class="oauth-stack mt-8 flex flex-col gap-4" aria-label="Third party log in">
+                <button class="oauth-btn oauth-btn--google" data-mock-oauth="Google">
+                  <span class="oauth-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                      <path
+                        d="M12 5.09c1.33 0 2.52.46 3.46 1.36l2.58-2.58A7.94 7.94 0 0012 2 9.99 9.99 0 002 12l3.47-.27A6.49 6.49 0 0112 5.09z"
+                        fill="#EA4335"
+                      />
+                      <path
+                        d="M2 12a9.99 9.99 0 0010 10c2.7 0 4.96-.96 6.6-2.56l-3.19-2.62a5.92 5.92 0 01-3.41 1.08c-2.6 0-4.8-1.75-5.58-4.1H2.88L2 11.99"
+                        fill="#34A853"
+                      />
+                      <path
+                        d="M17.82 19.44A9.94 9.94 0 0022 12c0-.66-.06-1.32-.17-1.96H12v3.88h5.63a5.09 5.09 0 01-2.12 3.52l2.31 1.99z"
+                        fill="#4285F4"
+                      />
+                      <path
+                        d="M6.48 14.8A5.97 5.97 0 016 12c0-.98.23-1.9.64-2.73L3.15 6.27A10 10 0 002 12a9.98 9.98 0 002.88 7.12l3.6-2.32z"
+                        fill="#FBBC05"
+                      />
+                    </svg>
+                  </span>
+                  Continue with Google
+                </button>
+
+                <button class="oauth-btn oauth-btn--facebook" data-mock-oauth="Facebook">
+                  <span class="oauth-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M15 3h-3a4 4 0 00-4 4v3H5v4h3v7h4v-7h3.5L16 10h-4V7.5A1.5 1.5 0 0113.5 6H15V3z"
+                      />
+                    </svg>
+                  </span>
+                  Continue with Facebook
+                </button>
+
+                <button class="email-signup" data-mock-oauth="Email Signup">Sign up with email</button>
+              </div>
+            </div>
+
+            <div class="auth-card__right px-10 py-10 md:py-14 border-t md:border-l border-neutral-200">
+              <p class="login-heading text-lg font-semibold text-center md:text-left">Login</p>
+              <form class="login-form mt-6 space-y-5" data-login-form>
+                <label class="form-field">
+                  <span class="form-label">Email</span>
+                  <input type="email" name="email" placeholder="Your email" required />
+                </label>
+                <label class="form-field">
+                  <span class="form-label">Password</span>
+                  <input
+                    type="password"
+                    name="password"
+                    placeholder="Your password"
+                    required
+                    minlength="8"
+                  />
+                </label>
+                <button type="submit" class="login-btn">Login</button>
+              </form>
+
+              <a href="#" class="forgot-link mt-4 block text-center md:text-left">Forgot password?</a>
+
+              <div class="divider my-8">
+                <span>or</span>
+              </div>
+
+              <div class="cta-panel space-y-3 text-sm text-center md:text-left text-neutral-500">
+                <p class="font-semibold text-[#1c1c1c]">Sign up with email</p>
+                <p>
+                  Don't have an account? Sign up to curate your feed, follow insightful people, and
+                  ask burning questions.
+                </p>
+                <a href="home.html" class="cta-pill">Explore the replica experience</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="language-selector mt-10 flex flex-wrap items-center justify-center gap-2 text-sm text-neutral-500">
+          <span class="text-neutral-600">New:</span>
+          <a href="#" class="language-link">עברית</a>
+          <a href="#" class="language-link">العربية</a>
+          <a href="#" class="language-link">polski</a>
+          <a href="#" class="language-link">ગુજરાતી</a>
+          <a href="#" class="language-link">தமிழ்</a>
+          <a href="#" class="language-link">മലയാളം</a>
+          <a href="#" class="language-link">తెలుగు</a>
+        </div>
+
+        <footer class="login-footer mt-6 text-sm text-neutral-500 flex flex-wrap justify-center gap-3">
+          <a href="#" class="footer-link">About</a>
+          <a href="#" class="footer-link">Careers</a>
+          <a href="#" class="footer-link">Privacy</a>
+          <a href="#" class="footer-link">Terms</a>
+          <a href="#" class="footer-link">Contact</a>
+          <a href="#" class="footer-link">Languages</a>
+          <a href="#" class="footer-link">Your Ad Choices</a>
+          <a href="#" class="footer-link">Press</a>
+          <span>© Quora, Inc. 2025</span>
+        </footer>
+      </main>
+    </div>
+
+    <div class="toast hidden" role="status" aria-live="polite"></div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
