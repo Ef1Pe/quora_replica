@@ -1,0 +1,47 @@
+site_analysis:
+  name: "Quora"
+  url: "https://www.quora.com/"
+  type: "social/q-and-a"
+
+  color_palette:
+    primary: "#B92B27"
+    secondary: "#0F1419"
+    accent: "#2A9134"
+    text_primary: "#1C1C1C"
+    text_secondary: "#636466"
+    background: "#F1F2F2"
+
+  typography:
+    heading_font: "'Domine', 'Georgia', serif"
+    heading_sizes:
+      h1: "56px"
+      h2: "32px"
+      h3: "24px"
+    body_font: "'Source Sans 3', 'Helvetica Neue', sans-serif"
+    body_size: "16px"
+    ui_font: "'Source Sans 3', sans-serif"
+
+  layout:
+    max_width: "1320px"
+    header_height: "72px"
+    sidebar_width: "280px"
+    grid_columns: 3
+    grid_gap: "32px"
+
+  key_components:
+    - "Full-bleed illustrated background"
+    - "Central authentication card"
+    - "OAuth buttons with brand colors"
+    - "Credential login form"
+    - "Language switcher and footer links"
+
+  injection_targets:
+    - name: "auth_card"
+      selector: ".auth-card"
+      description: "Container for hero login card (used for onboarding A/B tests)"
+    - name: "feed_primary"
+      selector: ".dynamic-feed"
+      description: "Primary feed column on signed-in style pages"
+    - name: "sidebar_callouts"
+      selector: ".sidebar-widgets"
+      description: "Right sidebar callouts for announcements or promos"
